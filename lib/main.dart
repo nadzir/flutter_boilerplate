@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
 }
 
 class AfterSplash extends StatelessWidget {
-
   // Redux: Configure store
   final store = Store<AppState>(
     appReducer,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/container/firstLaunchText.dart';
+import 'package:flutter_boilerplate/container/FirstLaunchText/firstLaunchText.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);

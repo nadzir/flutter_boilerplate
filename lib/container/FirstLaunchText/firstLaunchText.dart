@@ -18,8 +18,9 @@ class _FirstLaunchTextState extends State<FirstLaunchText> {
     return StoreConnector<AppState, AppView>(
       converter: AppView.fromStore,
       builder: (BuildContext context, AppView vm) {
-
-        var text = vm.status.isFirstLaunch ? 'First Launch' : 'Updated via redux after 3 seconds';
+        var text = vm.status.isFirstLaunch
+            ? 'First Launch'
+            : 'Updated via redux after 3 seconds';
         Timer(Duration(seconds: 3), () {
           vm.status.updateIsFirstLaunch(false);
         });

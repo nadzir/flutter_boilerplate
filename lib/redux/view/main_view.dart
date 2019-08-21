@@ -4,7 +4,7 @@ import 'package:flutter_boilerplate/redux/view/status_view.dart';
 import 'package:redux/redux.dart';
 
 class AppView {
- StatusView status;
+  StatusView status;
 
   AppView({
     @required this.status,

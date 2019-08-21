@@ -16,5 +16,4 @@ class AppState {
       status: status ?? this.status,
     );
   }
-
 }

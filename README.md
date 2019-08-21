@@ -9,9 +9,14 @@ Boilerplate project to quick start flutter
 ```
 ...
 └───lib
-│   │   main.dart : Entrypoint
-│   └───UI        : Screen 
-│       │   home.dart
+│   │   main.dart             : Entrypoint
+│   └─── UI                   : Screen Widgets
+│   └─── container            : Widgets connected to redux state
+│   └─── redux                
+│       └─── action           
+│       └─── reducer                
+│       └─── state                
+│       └─── view                
 │   
 ```
 
