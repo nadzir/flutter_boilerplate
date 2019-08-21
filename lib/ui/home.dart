@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -23,8 +21,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

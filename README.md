@@ -7,21 +7,11 @@ Boilerplate project to quick start flutter
 ## Code Structure
 
 ```
-placeholder
-│   ...
-│   ...
-│
+...
 └───lib
-│   │   main.dart : entrypoint
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
+│   │   main.dart : Entrypoint
+│   └───UI        : Screen 
+│       │   home.dart
 │   
-└───folder2
-    │   file021.txt
-    │   file022.txt
 ```
 

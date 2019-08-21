@@ -33,4 +33,3 @@ class AfterSplash extends StatelessWidget {
     );
   }
 }
-
