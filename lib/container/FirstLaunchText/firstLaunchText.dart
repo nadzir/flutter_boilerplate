@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/redux/state/app_state.dart';
 import 'package:flutter_boilerplate/redux/view/main_view.dart';
+import 'package:flutter_boilerplate/utility/SizeConfig.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 class FirstLaunchText extends StatefulWidget {
@@ -25,11 +26,14 @@ class _FirstLaunchTextState extends State<FirstLaunchText> {
           vm.status.updateIsFirstLaunch(false);
         });
 
-        return Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Text(
-            text,
-            style: Theme.of(context).textTheme.title,
+        return Container(
+          height: SizeConfig.blockSizeHeight * 20,
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.title,
+            ),
           ),
         );
       },

@@ -10,13 +10,15 @@ Boilerplate project to quick start flutter
 ...
 └───lib
 │   │   main.dart             : Entrypoint
-│   └─── UI                   : Screen Widgets
+│   └─── ui                   : Screen Widgets
 │   └─── container            : Widgets connected to redux state
 │   └─── redux                
 │       └─── action           
 │       └─── reducer                
 │       └─── state                
 │       └─── view                
+│   └─── util                
+│   │   SizeConfig.dart       : Determine width and height of device
 │   
 ```
 
