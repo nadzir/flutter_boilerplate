@@ -14,8 +14,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       home: SplashScreen(
         seconds: 2,
@@ -39,7 +37,6 @@ class AfterSplash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // SizeConfig is to set the width and height of the physical device
     // Need to set the context once
     SizeConfig.setContext(context);

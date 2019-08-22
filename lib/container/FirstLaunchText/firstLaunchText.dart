@@ -22,9 +22,12 @@ class _FirstLaunchTextState extends State<FirstLaunchText> {
         var text = vm.status.isFirstLaunch
             ? 'First Launch'
             : 'Updated via redux after 3 seconds';
-        Timer(Duration(seconds: 3), () {
-          vm.status.updateIsFirstLaunch(false);
-        });
+
+        if (vm.status.isFirstLaunch) {
+          Timer(Duration(seconds: 3), () {
+            vm.status.updateIsFirstLaunch(false);
+          });
+        }
 
         return Container(
           height: SizeConfig.blockSizeHeight * 20,
