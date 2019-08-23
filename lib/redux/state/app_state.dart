@@ -16,4 +16,11 @@ class AppState {
       status: status ?? this.status,
     );
   }
+
+  static AppState fromJson(dynamic json) {
+    if (json == null) return AppState();
+    return AppState(status: StatusState.fromJson(json["status"]));
+  }
+
+  dynamic toJson() => {'status': status.toJson()};
 }

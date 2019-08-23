@@ -1,32 +1,29 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/redux/state/app_state.dart';
 import 'package:flutter_boilerplate/redux/view/main_view.dart';
 import 'package:flutter_boilerplate/utility/SizeConfig.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-class FirstLaunchText extends StatefulWidget {
+class LaunchText extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _FirstLaunchTextState();
+    return _LaunchTextState();
   }
 }
 
-class _FirstLaunchTextState extends State<FirstLaunchText> {
+class _LaunchTextState extends State<LaunchText> {
+  var firstLaunch = true;
+
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, AppView>(
       converter: AppView.fromStore,
       builder: (BuildContext context, AppView vm) {
-        var text = vm.status.isFirstLaunch
-            ? 'First Launch'
-            : 'Updated via redux after 3 seconds';
+        var text = 'Num of updated: ' + vm.status.numOfTimesLaunch.toString();
 
-        if (vm.status.isFirstLaunch) {
-          Timer(Duration(seconds: 3), () {
-            vm.status.updateIsFirstLaunch(false);
-          });
+        if (firstLaunch) {
+          vm.status.updateNumOfTimesLaunch(vm.status.numOfTimesLaunch+1);
+          firstLaunch = false;
         }
 
         return Container(

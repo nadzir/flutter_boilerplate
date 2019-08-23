@@ -4,20 +4,20 @@ import 'package:flutter_boilerplate/redux/state/app_state.dart';
 import 'package:redux/redux.dart';
 
 class StatusView {
-  bool isFirstLaunch;
+  int numOfTimesLaunch;
 
-  Function updateIsFirstLaunch;
+  Function updateNumOfTimesLaunch;
 
   StatusView({
-    @required this.isFirstLaunch,
-    @required this.updateIsFirstLaunch,
+    @required this.numOfTimesLaunch,
+    @required this.updateNumOfTimesLaunch,
   });
 
   static StatusView fromStore(Store<AppState> store) {
     return new StatusView(
-        isFirstLaunch: store.state.status.isFirstLaunch ?? true,
-        updateIsFirstLaunch: (bool isFirstLaunch) {
-          store.dispatch(UpdateIsFirstLaunch(isFirstLaunch: isFirstLaunch));
+        numOfTimesLaunch: store.state.status.numOfTimesLaunch ?? 0,
+        updateNumOfTimesLaunch: (int numOfTimesLaunch) {
+          store.dispatch(UpdateNumOfTimesLaunch(numOfTimesLaunch: numOfTimesLaunch));
         });
   }
 }

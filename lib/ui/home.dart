@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/container/FirstLaunchText/firstLaunchText.dart';
+import 'package:flutter_boilerplate/container/launchText/launchText.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            FirstLaunchText(),
+            LaunchText(),
             Text(
               'You have pushed the button this many times:',
             ),

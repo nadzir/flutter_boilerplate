@@ -1,13 +1,19 @@
 class StatusState {
-  bool isFirstLaunch;
+  int numOfTimesLaunch;
 
   StatusState({
-    this.isFirstLaunch,
+    this.numOfTimesLaunch,
   });
 
-  StatusState copyWith({bool isFirstLaunch}) {
+  StatusState copyWith({int numOfTimesLaunch}) {
     return new StatusState(
-      isFirstLaunch: isFirstLaunch ?? this.isFirstLaunch,
-    );
+        numOfTimesLaunch: numOfTimesLaunch ?? this.numOfTimesLaunch);
   }
+
+  static StatusState fromJson(dynamic json) {
+    if (json == null) return StatusState();
+    return StatusState(numOfTimesLaunch: json["numOfTimesLaunch"] as int);
+  }
+
+  dynamic toJson() => {'numOfTimesLaunch': this.numOfTimesLaunch};
 }

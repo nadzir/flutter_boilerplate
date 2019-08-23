@@ -1,4 +1,4 @@
-class UpdateIsFirstLaunch {
-  final bool isFirstLaunch;
-  UpdateIsFirstLaunch({this.isFirstLaunch});
+class UpdateNumOfTimesLaunch {
+  final int numOfTimesLaunch;
+  UpdateNumOfTimesLaunch({this.numOfTimesLaunch});
 }
