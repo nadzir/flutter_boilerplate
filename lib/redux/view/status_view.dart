@@ -17,7 +17,8 @@ class StatusView {
     return new StatusView(
         numOfTimesLaunch: store.state.status.numOfTimesLaunch ?? 0,
         updateNumOfTimesLaunch: (int numOfTimesLaunch) {
-          store.dispatch(UpdateNumOfTimesLaunch(numOfTimesLaunch: numOfTimesLaunch));
+          store.dispatch(
+              UpdateNumOfTimesLaunch(numOfTimesLaunch: numOfTimesLaunch));
         });
   }
 }

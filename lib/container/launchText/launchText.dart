@@ -22,7 +22,7 @@ class _LaunchTextState extends State<LaunchText> {
         var text = 'Num of updated: ' + vm.status.numOfTimesLaunch.toString();
 
         if (firstLaunch) {
-          vm.status.updateNumOfTimesLaunch(vm.status.numOfTimesLaunch+1);
+          vm.status.updateNumOfTimesLaunch(vm.status.numOfTimesLaunch + 1);
           firstLaunch = false;
         }
 
